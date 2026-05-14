@@ -31,6 +31,7 @@ def main() -> None:
     print("1. Check unstaged changes with git diff")
     print("2. Check staged changes with git diff --staged")
     print("3. Verify .env is ignored")
+    print("4. Verify .env is not tracked by git")
 
 
 if __name__ == "__main__":
