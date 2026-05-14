@@ -1,0 +1,35 @@
+{
+  "session_id": "demo-engineering-agent",
+  "goal": "我想补 Git、日志调试和 Docker，让 Agent 项目更像真实公司项目。",
+  "current_stage": "死信队列与人工介入边界",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "Git 基础",
+    "日志基础"
+  ],
+  "current_blocker": "我已经知道失败项如何重试，但还不清楚重试几次后应该停止自动恢复并转入人工检查。",
+  "today_action": "先写出失败任务的最小重试停机规则：定义最大重试次数、每次重试前的检查条件，以及超过阈值后进入 dead letter queue 并转人工检查的触发条件。",
+  "next_stage": "死信队列与人工介入边界",
+  "retry_count": 2,
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-14T11:21:09",
+      "from_stage": "执行报告对齐验证",
+      "to_stage": "失败重试与恢复队列",
+      "today_action": "定义“失败项进入 retry queue 后如何恢复并回接 execution report 主线”的最小规则：先列出失败收集字段、保守重试触发条件，以及重试成功后何时重新并入主线报告。",
+      "short_reason": "当前阻塞点已经非常明确，且队列最高优先级也指向同一问题；先补齐失败收集、保守重试和恢复回接规则，最容易形成可验证的最小闭环。",
+      "history_note": "从执行报告对齐验证推进到失败重试与恢复队列设计，聚焦定义失败收集、保守重试与成功后回接主线报告的最小规则。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-14T11:34:48",
+      "from_stage": "失败重试与恢复队列",
+      "to_stage": "死信队列与人工介入边界",
+      "today_action": "先写出失败任务的最小重试停机规则：定义最大重试次数、每次重试前的检查条件，以及超过阈值后进入 dead letter queue 并转人工检查的触发条件。",
+      "short_reason": "当前最高优先级 blocker 就是停止自动恢复的阈值问题；先收敛最大重试次数和转人工规则，才能完成失败恢复机制的闭环。",
+      "history_note": "细化失败重试停止条件，补充最大重试次数、dead letter queue 进入规则与转人工检查的最小边界。"
+    }
+  ]
+}

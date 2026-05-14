@@ -1,0 +1,51 @@
+{
+  "session_id": "demo-python-agent",
+  "goal": "我想先用 Python 做一个简单 Agent Demo。",
+  "current_stage": "死信队列与人工介入规则落地",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "单工具调用",
+    "状态与工作流基础",
+    "持久化 session",
+    "多 session 管理",
+    "session 路由",
+    "session 优先级队列",
+    "session 队列执行",
+    "execution report",
+    "retry queue"
+  ],
+  "current_blocker": "我已经知道失败项可以进入 retry queue，但还不清楚什么时候该停止自动重试并转入人工处理。",
+  "today_action": "为 Python Agent 产出一版最小可执行规则：定义固定最大重试次数、区分可重试与不可重试错误、加入提前终止条件，并明确任务超过阈值后进入 dead letter queue 且必须转人工检查的判定流程。",
+  "next_stage": "死信队列与人工介入规则落地",
+  "retry_count": 0,
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-14T11:21:04",
+      "from_stage": "执行结果汇总与复盘",
+      "to_stage": "失败重试与恢复队列",
+      "today_action": "先为 Python Agent 的 execution report 定义最小 retry queue 闭环：明确失败项收集格式、入队条件、保守重试次数，以及重试成功后如何回接主线结果汇总。",
+      "short_reason": "当前 blocker 已明确落在失败项重试与恢复机制上，而该 session 场景更小，适合先验证失败收集、重试入队和恢复回接规则，为更复杂的工程 session 复用。",
+      "history_note": "从 execution report 继续推进到 retry queue 最小闭环，聚焦失败项入队、保守重试及成功后的主线结果回接规则。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-14T11:34:56",
+      "from_stage": "失败重试与恢复队列",
+      "to_stage": "死信队列与人工介入边界",
+      "today_action": "定义 Python Agent retry queue 的停止规则：设定最大重试次数、可提前停止的错误类型，以及超过阈值后转入 dead letter queue 并标记人工检查。",
+      "short_reason": "该 session 的 blocker 正是自动重试何时停止；队列 top_focus 也要求先收敛最大重试次数、停止阈值和转人工最小规则，因此应直接推进这一闭环。",
+      "history_note": "细化 retry queue 停止条件，补上最大重试次数、提前终止判定，以及失败任务进入 dead letter queue 后转人工检查的最小规则。"
+    },
+    {
+      "step_index": 3,
+      "updated_at": "2026-05-14T11:40:04",
+      "from_stage": "死信队列与人工介入边界",
+      "to_stage": "死信队列与人工介入规则落地",
+      "today_action": "为 Python Agent 产出一版最小可执行规则：定义固定最大重试次数、区分可重试与不可重试错误、加入提前终止条件，并明确任务超过阈值后进入 dead letter queue 且必须转人工检查的判定流程。",
+      "short_reason": "当前 blocker 仍集中在停止自动重试和转人工边界，且队列 top_focus 也要求优先收敛这组规则；该 session 与高优先级 engineering session 高度同构，先固化最小规则最利于后续复用。",
+      "history_note": "继续推进 Python Agent 的重试停止边界，准备把最大重试次数、提前终止条件和进入 dead letter queue 后的人工检查规则落成可执行规范。"
+    }
+  ]
+}

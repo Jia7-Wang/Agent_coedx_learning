@@ -1,0 +1,28 @@
+{
+  "session_id": "demo-rag-agent",
+  "goal": "我想做一个带知识库检索的问答 Agent。",
+  "current_stage": "知识库 Agent 深化",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "单工具调用",
+    "最小 RAG",
+    "知识库 Agent",
+    "持久化 session"
+  ],
+  "current_blocker": "我还不确定该优先继续 RAG 路线，还是先把人工处理回写、重新入队和关闭决策这条失败闭环吃透。",
+  "today_action": "继续观察主线如何把人工处理结论回写到 session，并决定重新入队还是关闭",
+  "next_stage": "人工处理结果回写与重新入队",
+  "retry_count": 0,
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-13T09:20:00",
+      "from_stage": "知识库 Agent",
+      "to_stage": "带状态的学习工作流",
+      "today_action": "让 RAG 学习过程也带上状态、history 和阶段推进",
+      "short_reason": "先把检索型 Agent 的学习轨迹串起来。",
+      "history_note": "RAG 路线也开始进入带状态的学习方式。"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "session_id": "demo-python-agent",
+  "goal": "我想先用 Python 做一个简单 Agent Demo。",
+  "current_stage": "人工接管清单生成",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "单工具调用",
+    "状态与工作流基础",
+    "持久化 session",
+    "多 session 管理",
+    "session 路由",
+    "session 优先级队列",
+    "session 队列执行",
+    "execution report",
+    "retry queue",
+    "dead letter queue"
+  ],
+  "current_blocker": "我已经知道失败项什么时候要进入 dead letter queue，但还不清楚进入后如何生成人工接管清单。",
+  "today_action": "定义 dead letter queue 到人工接管清单的字段模板与生成规则，先产出一版包含错误摘要、上下文、失败原因、建议处理动作和优先级的最小任务卡。",
+  "next_stage": "人工接管清单生成",
+  "retry_count": 0,
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-14T11:40:04",
+      "from_stage": "死信队列与人工介入边界",
+      "to_stage": "死信队列与人工介入规则落地",
+      "today_action": "为 Python Agent 产出一版最小可执行规则：定义固定最大重试次数、区分可重试与不可重试错误、加入提前终止条件，并明确任务超过阈值后进入 dead letter queue 且必须转人工检查的判定流程。",
+      "short_reason": "当前 blocker 仍集中在停止自动重试和转人工边界，且队列 top_focus 也要求优先收敛这组规则；该 session 与高优先级 engineering session 高度同构，先固化最小规则最利于后续复用。",
+      "history_note": "继续推进 Python Agent 的重试停止边界，准备把最大重试次数、提前终止条件和进入 dead letter queue 后的人工检查规则落成可执行规范。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-14T12:01:30",
+      "from_stage": "死信队列与人工介入规则落地",
+      "to_stage": "人工接管清单生成",
+      "today_action": "定义 dead letter queue 到人工接管清单的字段模板与生成规则，先产出一版包含错误摘要、上下文、失败原因、建议处理动作和优先级的最小任务卡。",
+      "short_reason": "当前 blocker 已从进入 dead letter queue 的判定转向进入后的人工接管输出方式，最需要先补齐可读、可执行的人工处理任务模板，才能形成失败闭环。",
+      "history_note": "将 Python Agent 从 dead letter queue 判定推进到人工接管清单生成，开始定义失败项转人工任务卡的最小字段模板与生成规则。"
+    }
+  ]
+}

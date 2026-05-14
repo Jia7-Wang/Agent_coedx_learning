@@ -1,0 +1,35 @@
+{
+  "session_id": "demo-python-agent",
+  "goal": "我想先用 Python 做一个简单 Agent Demo。",
+  "current_stage": "多 session 管理入门",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "单工具调用",
+    "状态与工作流基础",
+    "持久化 session"
+  ],
+  "current_blocker": "我知道 session 可以保存了，但还不清楚多个 session 怎么分开管理。",
+  "today_action": "实现一个 session_id 到独立状态文件的映射，并用两个不同 session 分别创建、读取和恢复状态。",
+  "next_stage": "多 session 管理入门",
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-13T09:10:00",
+      "from_stage": "状态历史记录与可复盘工作流",
+      "to_stage": "持久化状态与会话恢复",
+      "today_action": "把 state 保存到文件里并支持恢复",
+      "short_reason": "先让单个 session 真正跨运行保留。",
+      "history_note": "完成了单 session 的持久化闭环。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-13T09:48:59",
+      "from_stage": "持久化状态与会话恢复",
+      "to_stage": "多 session 管理入门",
+      "today_action": "实现一个 session_id 到独立状态文件的映射，并用两个不同 session 分别创建、读取和恢复状态。",
+      "short_reason": "你已经完成单 session 持久化，当前卡点正是多个 session 的状态隔离；先做按 session_id 分开存取，最能直接打通这个问题。",
+      "history_note": "开始从单 session 持久化过渡到多 session 状态隔离，重点验证 session_id 与独立状态存储的映射。"
+    }
+  ]
+}

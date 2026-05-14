@@ -1,0 +1,65 @@
+{
+  "session_id": "demo-python-agent",
+  "goal": "我想先用 Python 做一个简单 Agent Demo。",
+  "current_stage": "session 队列执行入门",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "单工具调用",
+    "状态与工作流基础",
+    "持久化 session",
+    "多 session 管理",
+    "session 路由",
+    "session 优先级队列"
+  ],
+  "current_blocker": "我已经知道如何给多个 session 排队，但还不清楚怎样按队列顺序依次执行。",
+  "today_action": "实现一个最小可运行的队列执行器：每次从已排序 priority_queue 取队首 session，加载其状态，生成一次状态更新并写回，再继续处理下一个 session。",
+  "next_stage": "session 队列执行入门",
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-13T09:10:00",
+      "from_stage": "状态历史记录与可复盘工作流",
+      "to_stage": "持久化状态与会话恢复",
+      "today_action": "把 state 保存到文件里并支持恢复",
+      "short_reason": "先让单个 session 真正跨运行保留。",
+      "history_note": "完成了单 session 的持久化闭环。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-13T09:48:59",
+      "from_stage": "持久化状态与会话恢复",
+      "to_stage": "多 session 管理入门",
+      "today_action": "实现一个 session_id 到独立状态文件的映射，并用两个不同 session 分别创建、读取和恢复状态。",
+      "short_reason": "你已经完成单 session 持久化，当前卡点正是多个 session 的状态隔离；先做按 session_id 分开存取，最能直接打通这个问题。",
+      "history_note": "开始从单 session 持久化过渡到多 session 状态隔离，重点验证 session_id 与独立状态存储的映射。"
+    },
+    {
+      "step_index": 3,
+      "updated_at": "2026-05-13T10:38:13",
+      "from_stage": "多 session 管理入门",
+      "to_stage": "session 路由规则设计与验证",
+      "today_action": "定义一个可执行的 session 路由规则：基于 goal、current_stage、current_blocker、history_count 和最近一次 history_note 设定优先级，并写出自动选择伪代码后用现有三个 session 验证一次。",
+      "short_reason": "当前 blocker 就是不知道如何自动决定继续哪个 session，而路由建议已经给出最直接的推进路径；先把选择规则做出来，能立即解决多 session 管理中的核心缺口。",
+      "history_note": "从 session 状态隔离继续推进到自动路由，先定义优先级规则并用现有多个 session 做一次选择验证。"
+    },
+    {
+      "step_index": 4,
+      "updated_at": "2026-05-13T12:26:47",
+      "from_stage": "session 路由规则设计与验证",
+      "to_stage": "session 优先级队列设计",
+      "today_action": "把多个 session 的优先级排序规则写成可执行打分表：至少包含直接阻塞度、与当前任务相关度、阶段紧迫性、可复用价值四个维度，并用现有三个 session 跑一次排序验证结果。",
+      "short_reason": "当前 blocker 已从“选择哪个 session”收敛为“如何给多个 session 排序”；优先队列规则正是当前最直接的缺口，而且验证后可复用于后续路由。",
+      "history_note": "从 session 路由验证进一步推进到优先级队列设计，开始定义多维打分规则并用现有 session 完成一次排序验证。"
+    },
+    {
+      "step_index": 5,
+      "updated_at": "2026-05-14T08:58:21",
+      "from_stage": "session 优先级队列设计",
+      "to_stage": "session 队列执行入门",
+      "today_action": "实现一个最小可运行的队列执行器：每次从已排序 priority_queue 取队首 session，加载其状态，生成一次状态更新并写回，再继续处理下一个 session。",
+      "short_reason": "当前 blocker 已不在排序规则本身，而在如何把排序结果变成按顺序推进的执行流程；先做队首选择、状态加载、单步更新、写回这条最小闭环，最能直接打通主线。",
+      "history_note": "从 session 优先级队列设计推进到队列执行入门，开始实现按已排序队列依次选择 session、更新状态并持久化的最小执行闭环。"
+    }
+  ]
+}

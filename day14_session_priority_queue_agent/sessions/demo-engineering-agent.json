@@ -1,0 +1,25 @@
+{
+  "session_id": "demo-engineering-agent",
+  "goal": "我想补 Git、日志调试和 Docker，让 Agent 项目更像真实公司项目。",
+  "current_stage": "工程基础补强",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "Git 基础",
+    "日志基础"
+  ],
+  "current_blocker": "我知道工程基础重要，但总是容易被 Agent 主线学习打断。",
+  "today_action": "把工程基础和 Agent 学习节奏对齐",
+  "next_stage": "session 优先级队列设计",
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-13T09:35:00",
+      "from_stage": "Agent 入门基础",
+      "to_stage": "工程基础补强",
+      "today_action": "把 Git、日志与 Docker 加入学习主线",
+      "short_reason": "不能只会跑 demo，也要开始靠近真实工程实践。",
+      "history_note": "工程基础路线被单独抽成了一个 session。"
+    }
+  ]
+}

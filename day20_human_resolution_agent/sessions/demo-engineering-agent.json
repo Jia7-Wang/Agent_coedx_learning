@@ -1,0 +1,38 @@
+{
+  "session_id": "demo-engineering-agent",
+  "goal": "我想补 Git、日志调试和 Docker，让 Agent 项目更像真实公司项目。",
+  "current_stage": "人工接管清单生成",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "Git 基础",
+    "日志基础",
+    "retry queue",
+    "dead letter queue",
+    "human handoff checklist"
+  ],
+  "current_blocker": "我已经知道 dead letter queue 里的任务该如何生成 handoff 清单，但还不清楚人工处理后的结论应该怎样回写到 session，并决定是否重新入队。",
+  "today_action": "观察 handoff 清单是否足够支撑人工决定重新入队或关闭",
+  "next_stage": "人工处理结果回写与重新入队",
+  "retry_count": 2,
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-14T11:34:48",
+      "from_stage": "失败重试与恢复队列",
+      "to_stage": "死信队列与人工介入边界",
+      "today_action": "先写出失败任务的最小重试停机规则：定义最大重试次数、每次重试前的检查条件，以及超过阈值后进入 dead letter queue 并转人工检查的触发条件。",
+      "short_reason": "当前最高优先级 blocker 就是停止自动恢复的阈值问题；先收敛最大重试次数和转人工规则，才能完成失败恢复机制的闭环。",
+      "history_note": "细化失败重试停止条件，补充最大重试次数、dead letter queue 进入规则与转人工检查的最小边界。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-14T12:01:30",
+      "from_stage": "死信队列与人工介入边界",
+      "to_stage": "人工接管清单生成",
+      "today_action": "观察 dead letter queue 是否能生成清晰的人工检查任务卡，并为后续人工决策提供足够上下文。",
+      "short_reason": "当前 blocker 已从何时停机，转向停机后如何把任务清晰交给人；先验证 handoff 清单质量，才能继续设计人工决策回写。",
+      "history_note": "从死信队列与人工介入边界推进到人工接管清单生成，开始验证 handoff 清单是否足够支撑人工处理。"
+    }
+  ]
+}

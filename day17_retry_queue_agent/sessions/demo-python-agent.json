@@ -1,0 +1,40 @@
+{
+  "session_id": "demo-python-agent",
+  "goal": "我想先用 Python 做一个简单 Agent Demo。",
+  "current_stage": "失败重试与恢复队列",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "单工具调用",
+    "状态与工作流基础",
+    "持久化 session",
+    "多 session 管理",
+    "session 路由",
+    "session 优先级队列",
+    "session 队列执行",
+    "execution report"
+  ],
+  "current_blocker": "我已经知道如何汇总执行结果，但还不清楚失败项应该怎样进入重试队列并恢复。",
+  "today_action": "先为 Python Agent 的 execution report 定义最小 retry queue 闭环：明确失败项收集格式、入队条件、保守重试次数，以及重试成功后如何回接主线结果汇总。",
+  "next_stage": "失败重试与恢复队列",
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-14T10:08:49",
+      "from_stage": "session 队列执行入门",
+      "to_stage": "执行结果汇总与复盘",
+      "today_action": "为队列执行器增加 execution report 输出：记录本轮执行了哪些 session、各自成功或失败、失败原因，以及下一轮调整建议。",
+      "short_reason": "当前主线 blocker 已明确集中在执行结果如何汇总与评估，补齐 execution report 是队列执行之后最直接的最小闭环扩展，也能为其他 session 提供统一反馈框架。",
+      "history_note": "在已完成队列执行基础上，推进 execution report 最小闭环设计，开始输出本轮执行结果、失败原因与下一轮调整建议。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-14T11:21:04",
+      "from_stage": "执行结果汇总与复盘",
+      "to_stage": "失败重试与恢复队列",
+      "today_action": "先为 Python Agent 的 execution report 定义最小 retry queue 闭环：明确失败项收集格式、入队条件、保守重试次数，以及重试成功后如何回接主线结果汇总。",
+      "short_reason": "当前 blocker 已明确落在失败项重试与恢复机制上，而该 session 场景更小，适合先验证失败收集、重试入队和恢复回接规则，为更复杂的工程 session 复用。",
+      "history_note": "从 execution report 继续推进到 retry queue 最小闭环，聚焦失败项入队、保守重试及成功后的主线结果回接规则。"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "session_id": "demo-python-agent",
+  "goal": "我想先用 Python 做一个简单 Agent Demo。",
+  "current_stage": "session 路由规则设计与验证",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "单工具调用",
+    "状态与工作流基础",
+    "持久化 session",
+    "多 session 管理"
+  ],
+  "current_blocker": "我已经知道 session_id 和状态文件的关系，但还不清楚如何自动决定该继续哪个 session。",
+  "today_action": "定义一个可执行的 session 路由规则：基于 goal、current_stage、current_blocker、history_count 和最近一次 history_note 设定优先级，并写出自动选择伪代码后用现有三个 session 验证一次。",
+  "next_stage": "session 路由规则设计与验证",
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-13T09:10:00",
+      "from_stage": "状态历史记录与可复盘工作流",
+      "to_stage": "持久化状态与会话恢复",
+      "today_action": "把 state 保存到文件里并支持恢复",
+      "short_reason": "先让单个 session 真正跨运行保留。",
+      "history_note": "完成了单 session 的持久化闭环。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-13T09:48:59",
+      "from_stage": "持久化状态与会话恢复",
+      "to_stage": "多 session 管理入门",
+      "today_action": "实现一个 session_id 到独立状态文件的映射，并用两个不同 session 分别创建、读取和恢复状态。",
+      "short_reason": "你已经完成单 session 持久化，当前卡点正是多个 session 的状态隔离；先做按 session_id 分开存取，最能直接打通这个问题。",
+      "history_note": "开始从单 session 持久化过渡到多 session 状态隔离，重点验证 session_id 与独立状态存储的映射。"
+    },
+    {
+      "step_index": 3,
+      "updated_at": "2026-05-13T10:38:13",
+      "from_stage": "多 session 管理入门",
+      "to_stage": "session 路由规则设计与验证",
+      "today_action": "定义一个可执行的 session 路由规则：基于 goal、current_stage、current_blocker、history_count 和最近一次 history_note 设定优先级，并写出自动选择伪代码后用现有三个 session 验证一次。",
+      "short_reason": "当前 blocker 就是不知道如何自动决定继续哪个 session，而路由建议已经给出最直接的推进路径；先把选择规则做出来，能立即解决多 session 管理中的核心缺口。",
+      "history_note": "从 session 状态隔离继续推进到自动路由，先定义优先级规则并用现有多个 session 做一次选择验证。"
+    }
+  ]
+}

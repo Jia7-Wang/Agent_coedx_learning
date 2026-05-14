@@ -1,0 +1,34 @@
+{
+  "session_id": "demo-engineering-agent",
+  "goal": "我想补 Git、日志调试和 Docker，让 Agent 项目更像真实公司项目。",
+  "current_stage": "工程基础节奏固化",
+  "completed_topics": [
+    "模型调用",
+    "结构化输出",
+    "Git 基础",
+    "日志基础"
+  ],
+  "current_blocker": "我知道工程基础重要，但总是容易被 Agent 主线学习打断。",
+  "today_action": "为工程基础 session 设定一个固定的小步任务槽，只补一个最缺且未完成的主题：Docker 入门",
+  "next_stage": "工程基础节奏固化",
+  "history": [
+    {
+      "step_index": 1,
+      "updated_at": "2026-05-13T09:35:00",
+      "from_stage": "Agent 入门基础",
+      "to_stage": "工程基础补强",
+      "today_action": "把 Git、日志与 Docker 加入学习主线",
+      "short_reason": "不能只会跑 demo，也要开始靠近真实工程实践。",
+      "history_note": "工程基础路线被单独抽成了一个 session。"
+    },
+    {
+      "step_index": 2,
+      "updated_at": "2026-05-14T08:58:27",
+      "from_stage": "工程基础补强",
+      "to_stage": "工程基础节奏固化",
+      "today_action": "为工程基础 session 设定一个固定的小步任务槽，只补一个最缺且未完成的主题：Docker 入门",
+      "short_reason": "该 session 的主要问题不是方向不清，而是容易被主线打断；先把学习节奏固定下来，并聚焦尚未完成的 Docker，最能保证它持续推进且不干扰主线。",
+      "history_note": "将工程基础 session 调整为主线之外的固定节奏推进，并把 Docker 入门设为下一步单点任务。"
+    }
+  ]
+}
