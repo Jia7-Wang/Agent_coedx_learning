@@ -4,3 +4,4 @@ This line will be changed on different branches to simulate a merge conflict.
 
 Use this file to observe how Git inserts conflict markers when it cannot decide
 which version should be kept automatically.
+master
