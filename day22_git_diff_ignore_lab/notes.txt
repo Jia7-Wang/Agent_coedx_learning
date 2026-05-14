@@ -1,0 +1,5 @@
+Day 22 Git notes
+
+- git diff shows unstaged changes
+- git diff --staged shows staged changes
+- .env files usually should not be committed
