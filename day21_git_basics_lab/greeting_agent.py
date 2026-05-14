@@ -23,7 +23,7 @@ def main() -> None:
     project_stage = os.getenv("PROJECT_STAGE", "day21-git-basics")
 
     tasks = [
-        "Run git status",
+        "Run git status first",
         "Edit one line in this file",
         "Run git diff",
         "Stage only this file",
