@@ -65,7 +65,7 @@ Day 7 的重点是：
 ## 5. 今天的目录结构
 
 ```text
-day7_integrated_agent/
+day07_integrated_agent/
   |- .env.example
   |- knowledge_base.txt
   |- integrated_learning_agent.py
@@ -77,7 +77,7 @@ day7_integrated_agent/
 ## 6. 你今天的运行方式
 
 ```powershell
-cd d:\PythonProjects\Agent_coedx_learning\day7_integrated_agent
+cd d:\PythonProjects\Agent_coedx_learning\day07_integrated_agent
 Copy-Item .env.example .env
 python .\integrated_learning_agent.py
 ```

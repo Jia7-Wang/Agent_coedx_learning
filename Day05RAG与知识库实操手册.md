@@ -79,7 +79,7 @@ RAG 可以拆成两部分：
 ## 5. 今天的目录结构
 
 ```text
-day5_rag_basics/
+day05_rag_basics/
   |- .env.example
   |- knowledge_base.txt
   |- simple_rag_demo.py
@@ -102,7 +102,7 @@ day5_rag_basics/
 ## 7. 你今天的运行方式
 
 ```powershell
-cd d:\PythonProjects\Agent_coedx_learning\day5_rag_basics
+cd d:\PythonProjects\Agent_coedx_learning\day05_rag_basics
 Copy-Item .env.example .env
 python .\simple_rag_demo.py
 ```
@@ -144,7 +144,7 @@ Day 5 的重点不是“更复杂的模型调用”，而是理解：
 如果你已经跑通 `simple_rag_demo.py`，可以继续运行：
 
 ```powershell
-python .\day5_rag_basics\enhanced_rag_demo.py
+python .\day05_rag_basics\enhanced_rag_demo.py
 ```
 
 这个版本会额外展示：

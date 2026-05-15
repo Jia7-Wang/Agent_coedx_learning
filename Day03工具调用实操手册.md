@@ -88,7 +88,7 @@ Tool Calling 可以简单理解成：
 ## 6. 今天的目录结构
 
 ```text
-day3_tool_calling/
+day03_tool_calling/
   |- .env.example
   |- simple_tool_calling.py
   |- README.md
@@ -99,7 +99,7 @@ day3_tool_calling/
 ## 7. 你今天会运行什么
 
 ```powershell
-cd d:\PythonProjects\Agent_coedx_learning\day3_tool_calling
+cd d:\PythonProjects\Agent_coedx_learning\day03_tool_calling
 Copy-Item .env.example .env
 python .\simple_tool_calling.py
 ```

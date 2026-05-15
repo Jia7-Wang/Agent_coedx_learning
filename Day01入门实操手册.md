@@ -36,7 +36,7 @@
 今天我们先用一个很小的目录练习：
 
 ```text
-day1_first_agent/
+day01_first_agent/
   |- .env.example
   |- first_model_call.py
   |- README.md
@@ -124,7 +124,7 @@ cd d:\PythonProjects\Agent_coedx_learning
 ### 6.2 进入练习目录
 
 ```powershell
-cd .\day1_first_agent\
+cd .\day01_first_agent\
 ```
 
 ### 6.3 新建 `.env`
@@ -245,7 +245,7 @@ Day 2 最适合继续学的是：
 
 请按这个顺序继续：
 
-1. 打开 [day1_first_agent/README.md](</d:/PythonProjects/Agent_coedx_learning/day1_first_agent/README.md>)
+1. 打开 [day01_first_agent/README.md](</d:/PythonProjects/Agent_coedx_learning/day01_first_agent/README.md>)
 2. 按说明创建 `.env`
 3. 运行 `python .\first_model_call.py`
 4. 跑完后把终端报错或结果贴给我

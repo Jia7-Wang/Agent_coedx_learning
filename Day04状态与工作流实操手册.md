@@ -87,7 +87,7 @@ Day 4 我们开始进入一个非常关键的新主题：
 ## 6. 今天的目录结构
 
 ```text
-day4_state_workflow/
+day04_state_workflow/
   |- .env.example
   |- workflow_task_planner.py
   |- README.md
@@ -109,7 +109,7 @@ day4_state_workflow/
 ## 8. 你今天的运行方式
 
 ```powershell
-cd d:\PythonProjects\Agent_coedx_learning\day4_state_workflow
+cd d:\PythonProjects\Agent_coedx_learning\day04_state_workflow
 Copy-Item .env.example .env
 python .\workflow_task_planner.py
 ```
@@ -153,7 +153,7 @@ Day 4 的目标不是学新 API，而是建立一个非常关键的 Agent 认知
 如果你已经跑通 `workflow_task_planner.py`，可以继续运行：
 
 ```powershell
-python .\day4_state_workflow\workflow_loop_planner.py
+python .\day04_state_workflow\workflow_loop_planner.py
 ```
 
 这个版本会连续推进 3 个步骤：

@@ -205,7 +205,7 @@ git log --oneline
 
 ## 7. Day 1 最推荐你练的流程
 
-在 `day1_first_agent` 目录里，你可以练这一套：
+在 `day01_first_agent` 目录里，你可以练这一套：
 
 ```powershell
 git init

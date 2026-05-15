@@ -111,7 +111,7 @@ text = json.dumps(data, ensure_ascii=False)
 
 ### Day 2
 
-在 [extract_learning_profile.py](</d:/PythonProjects/Agent_coedx_learning/day2_structured_output/extract_learning_profile.py>) 里：
+在 [extract_learning_profile.py](</d:/PythonProjects/Agent_coedx_learning/day02_structured_output/extract_learning_profile.py>) 里：
 
 ```python
 parsed = json.loads(json_text)

@@ -60,7 +60,7 @@ Day 8 我们继续往前走一步，让这个助理：
 ## 5. 今天的目录结构
 
 ```text
-day8_stateful_assistant/
+day08_stateful_assistant/
   |- .env.example
   |- knowledge_base.txt
   |- stateful_learning_assistant.py
@@ -72,7 +72,7 @@ day8_stateful_assistant/
 ## 6. 你今天的运行方式
 
 ```powershell
-cd d:\PythonProjects\Agent_coedx_learning\day8_stateful_assistant
+cd d:\PythonProjects\Agent_coedx_learning\day08_stateful_assistant
 Copy-Item .env.example .env
 python .\stateful_learning_assistant.py
 ```

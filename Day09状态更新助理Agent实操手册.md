@@ -51,7 +51,7 @@ Day 9 我们继续前进一步：
 ## 4. 今天的目录结构
 
 ```text
-day9_state_update_agent/
+day09_state_update_agent/
   |- .env.example
   |- knowledge_base.txt
   |- state_updating_assistant.py
@@ -63,7 +63,7 @@ day9_state_update_agent/
 ## 5. 你今天的运行方式
 
 ```powershell
-cd d:\PythonProjects\Agent_coedx_learning\day9_state_update_agent
+cd d:\PythonProjects\Agent_coedx_learning\day09_state_update_agent
 Copy-Item .env.example .env
 python .\state_updating_assistant.py
 ```

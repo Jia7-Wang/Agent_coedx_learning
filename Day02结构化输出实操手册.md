@@ -90,7 +90,7 @@
 今天的练习目录是：
 
 ```text
-day2_structured_output/
+day02_structured_output/
   |- .env.example
   |- extract_learning_profile.py
   |- README.md
@@ -99,7 +99,7 @@ day2_structured_output/
 你要运行的命令：
 
 ```powershell
-cd d:\PythonProjects\Agent_coedx_learning\day2_structured_output
+cd d:\PythonProjects\Agent_coedx_learning\day02_structured_output
 Copy-Item .env.example .env
 python .\extract_learning_profile.py
 ```
